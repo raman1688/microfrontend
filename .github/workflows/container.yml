@@ -1,6 +1,11 @@
 name: deploy-container
 
 on:
+  workflow_dispatch:
+    inputs:
+      msg:
+        description: 'test'
+        default: 'this workflow is run when triggered'
   push:
     branches:
       - master
